@@ -31,7 +31,7 @@ int i,a,b;
  
 void setup(){
   
-  img = loadImage("webwet.png");
+  img = loadImage("logo.png");
 //  width = img.width;
 //  height = img.height;
 //  size(width, height);
@@ -39,7 +39,7 @@ void setup(){
   frameRate(60);
   //comented for web
   minim = new Minim(this);
-  energy = minim.loadFile("data/energ.mp3"); 
+  energy = minim.loadFile("../data/energ.mp3"); 
   energy.play();
   hwidth = width>>1;
   hheight = height>>1;
@@ -130,7 +130,17 @@ void mousePressed()
 //    
 }
 
-void mouseReleased()
-{
+void keyPressed(){
+  if (key == '1') {
+ img = loadImage("lotus.png"); 
 }
-
+else if (key == '2') {
+  img = loadImage("waterlily.png");
+} 
+else if (key == '3') {
+  img = loadImage("webwet.png");
+} 
+else if (key == '4') {
+  img = loadImage("agbar.png");
+} 
+}
